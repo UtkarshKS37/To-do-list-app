@@ -1,0 +1,182 @@
+/*root is a variable, like the root, responsible for everything, going deeper than body, like gradient used in 
+body calls back to root to function*/
+:root{
+    --gradient: linear-gradient(180deg, rgba(45, 112, 1250, 0.7) 0%, #ff9933 100%);
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    background: var(--gradient);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn{
+    color: rgb(98, 67, 6);
+    background-color: antiquewhite;
+    padding: 8px 21px;
+    font-size: 15px;
+    border: none;
+    border-radius: 11px;
+    position: absolute;
+    right: 7px;
+    bottom: 1px;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+
+.todo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: white;
+    padding: 30px;
+    border-radius: 11px;
+    height: 52%;
+    width: 60%;
+    max-width: 666px;
+}
+
+h2{
+    text-transform: uppercase;
+    height: 30px;
+    text-align: center;
+}
+
+.input{
+    display: flex;
+    position: relative;
+}
+
+.input-field{
+    width: 100%;
+    border: 1px rgb(109, 123, 123);
+    border-radius: 9px;
+    padding: 9px;
+    font-size: 15px;
+}
+
+input[type="text"]::placeholder{
+    color: solid gray;
+}
+
+.todo-container{
+    display: flex;
+    gap: 15px;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 17px;
+}
+
+#todoList p{
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: rgb(174, 4, 247);
+}
+
+#todoList .disabled{
+    color: rgb(174, 4, 247);
+}
+
+.disabled{
+    display: flex;
+    text-decoration: line-through;
+}
+/*for cutting the ticked task*/
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+input[type="checkbox"]::before{
+    content: \2713; /*unicode for checkmark character*/
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    font-size: 22px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    color: transparent;
+}
+
+input[type="checkbox"]:checked::before{
+    color: white;
+    background-color: rgb(6, 185, 6);
+    border: 1px rgb(6, 185, 6);
+    border-radius: 50%;
+}
+
+.counter{
+    border: 1px rgb(106, 105, 105);
+}
+
+.counter-container{
+    display: flex;
+    justify-content: space-between;
+    height: 28px;
+    color: grey;
+}
+
+.counter-container button{
+    border: none;
+    background-color: transparent;
+    color: grey;
+    font-size: 15px;
+}
+
+.footer{
+    display: flex;
+    gap: 25px;
+    background-color: rgba(15, 21, 15, 0.358);
+    padding: 16px;
+    border-radius: 7px;
+}
+
+.made-by, .author{
+    font-size: 15px;
+}
+
+.made-by{
+    color: rgb(116, 248, 90);
+}
+
+.author{
+    color: #05f4e0;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.scroll{
+    height: 169px;
+    scrollbar-width: thin;
+}
+
+.scroll::-webkit-scrollbar{
+    width: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb{
+    background-color: blue;
+    border-radius: 9px;
+}
+
+.scroll::-webkit-scrollbar-track{
+    display: none;
+}
